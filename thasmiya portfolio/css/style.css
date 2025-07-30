@@ -1,0 +1,245 @@
+/* Reset & Basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  background-color: #0088cc;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  height: 50px;
+  border-radius: 50%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffdd57;
+}
+
+/* Home Section */
+.home {
+  padding: 60px 20px;
+  background: #f0f9ff83;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h1 {
+  font-size: 40px;
+  color: #222;
+}
+
+.home-content h1 span {
+  color: #cc003a;
+}
+
+.home-content h2 {
+  font-size: 24px;
+  color: #444;
+  margin: 10px 0;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0088cc;
+  color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #006699;
+}
+
+.btn-secondary {
+  background-color: #555;
+}
+
+.btn-secondary:hover {
+  background-color: #333;
+}
+
+.home-image img {
+  width: 250px;
+  height:250px;
+  object-fit:cover;
+  border-radius:50%; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-right:140px;
+}
+
+/* Sections General */
+section {
+  padding: 60px 20px;
+}
+
+.about-section,
+.Education-section,
+.Skills-section,
+.contact-section {
+  max-width: 1000px;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 32px;
+  color: #0088cc;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+h4.date {
+  color: #777;
+  margin: 10px 0;
+}
+
+/* Read More Toggle */
+.read-more-checkbox {
+  display: none;
+}
+
+.more-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-top: 10px;
+}
+
+.read-more-checkbox:checked + .more-content {
+  max-height: 500px;
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0088cc;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.read-more-btn::after {
+  content: 'Read More...';
+}
+
+.read-more-checkbox:checked + .more-content + .read-more-btn::after {
+  content: 'Show Less';
+}
+
+/* Skills Section */
+.Skills-section p {
+  margin: 10px 0;
+}
+
+/* Contact Form */
+.contact-row .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact-row input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn.filled {
+  background-color: #0088cc;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.filled:hover {
+  background-color: #005f99;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .home-image img {
+    margin-top: 30px;
+  }
+
+  .contact-row .form-row {
+    width: 100%;
+  }
+}
